@@ -6,10 +6,11 @@
 /*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 20:11:58 by pteixeir          #+#    #+#             */
-/*   Updated: 2025/02/06 20:00:11 by pteixeir         ###   ########.fr       */
+/*   Updated: 2025/02/12 23:01:35 by pteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/player.h"
 #include "so_long.h"
 
 int main(int argc, char**argv)

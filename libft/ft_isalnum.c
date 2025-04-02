@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 16:58:04 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/06 13:27:54 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/02/15 12:58:21 by aeberius          #+#    #+#             */
+/*   Updated: 2024/04/11 11:51:56 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 16:34:43 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/06 13:12:23 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/04/17 11:54:17 by aeberius          #+#    #+#             */
+/*   Updated: 2024/04/17 12:26:02 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

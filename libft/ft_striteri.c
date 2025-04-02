@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 15:57:52 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/02 16:57:06 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/04/24 20:00:04 by aeberius          #+#    #+#             */
+/*   Updated: 2024/04/29 15:11:26 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

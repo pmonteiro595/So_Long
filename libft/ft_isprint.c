@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 17:01:59 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/02 16:56:42 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/02/15 13:08:20 by aeberius          #+#    #+#             */
+/*   Updated: 2024/04/11 11:52:13 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

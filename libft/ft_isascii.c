@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 17:04:24 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/06 17:46:10 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/02/15 13:02:07 by aeberius          #+#    #+#             */
+/*   Updated: 2024/04/24 15:25:17 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                            :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 22:54:59 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/10/25 22:54:59 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/03/23 17:38:17 by aeberius          #+#    #+#             */
+/*   Updated: 2024/12/13 18:08:24 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -36,13 +36,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * signal);
 }
-
-/*
-#include <stdio.h>
-int main(void)
-{
-    char test[] = "   --+-+-9978rer6786";
-    printf("%d\n", ft_atoi(test));
-    return(0);
-}
-*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 15:54:32 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/06 14:43:52 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/04/24 19:14:00 by aeberius          #+#    #+#             */
+/*   Updated: 2024/04/25 12:46:32 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	char	*str_calloc;
 
-	if (s == NULL || f == NULL)
-		return (NULL);
 	i = 0;
-	str_calloc = ft_calloc (ft_strlen(s) + 1, sizeof(char));
+	str_calloc = ft_calloc (sizeof(char), ft_strlen(s) + 1);
 	if (str_calloc == NULL)
 		return (NULL);
 	while (s[i] != '\0')

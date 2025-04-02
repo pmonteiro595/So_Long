@@ -5,57 +5,44 @@
 #                                                     +:+ +:+         +:+      #
 #    By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/28 20:12:03 by pteixeir          #+#    #+#              #
-#    Updated: 2025/02/12 21:59:45 by pteixeir         ###   ########.fr        #
+#    Created: 2025/03/05 20:53:17 by pteixeir          #+#    #+#              #
+#    Updated: 2025/03/05 20:53:32 by pteixeir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
+CC = cc -Wall -Wextra -Werror
+RM = rm -rf
+LIBFT = libft/libft.a
+LIBFT_DIR = libft/
+MLX_DIR = ./mlx
+MLX_FLAGS = -Lmlx -lmlx -L/usr/lib/X11 -lXext -lX11
+MLX_LIB = $(MLX_DIR)/libmlx_Linux.a
+SRCS = *.c
+OBJS = $(SRCS:.c=.o)
+INCLUDES = -I/usr/include -Imlx
 
-CC = cc
-FLAGS = -Wall -Wextra -Werror
+all:  $(MLX_LIB) $(NAME)
 
-MLX_DIR = mlx
-LIBFT_DIR = libft
-INCLUDE_DIR = include  # Diretório dos headers
+$(NAME): $(LIBFT) $(OBJS)
+	$(CC) -o $(NAME) $(OBJS) $(LIBFT) $(MLX_FLAGS)
 
-MLX = $(MLX_DIR)/libmlx.a
-LIBFT = $(LIBFT_DIR)/libft.a
-
-MLX_FLAGS = -L$(MLX_DIR) -lmlx -L/usr/include/../lib -lXext -lX11 -lm -lbsd
-
-INCLUDES = -I$(INCLUDE_DIR) -I$(MLX_DIR) -I$(LIBFT_DIR)
-
-SRC = srcs/main.c srcs/map.c srcs/graphics.c srcs/player.c srcs/utils.c \
-      srcs/gnl/get_next_line.c srcs/gnl/get_next_line_utils.c
-
-OBJ = $(SRC:.c=.o)
-
-all: $(LIBFT) $(MLX) $(NAME)
+$(MLX_LIB):
+	@make -C $(MLX_DIR)
 
 $(LIBFT):
-	make -C $(LIBFT_DIR)
+	$(MAKE) -C $(LIBFT_DIR)
 
-$(MLX):
-	make -C $(MLX_DIR)
-
-$(NAME): $(OBJ)
-	$(CC) $(FLAGS) $(OBJ) $(LIBFT) $(MLX_FLAGS) -o $(NAME)
-
-%.o: %.c
-	$(CC) $(FLAGS) -c $< -o $@ $(INCLUDES)
+$(OBJS): $(SRCS)
+	$(CC) -c $(SRCS) $(INCLUDES)
 
 clean:
-	make -C $(LIBFT_DIR) clean
-	make -C $(MLX_DIR) clean
-	rm -f $(OBJ)
+	$(RM) $(OBJS)
+	$(MAKE) clean -C $(LIBFT_DIR)
 
 fclean: clean
-	make -C $(LIBFT_DIR) fclean
-	rm -f $(LIBFT)
-	rm -f $(MLX)
-	rm -f $(NAME)
+	$(RM) $(NAME)
+	$(MAKE) fclean -C $(LIBFT_DIR)
 
-re: fclean all
-
-.PHONY: all clean fclean re
+re: fclean
+	$(MAKE)

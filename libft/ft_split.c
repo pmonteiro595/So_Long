@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 15:49:23 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/07 15:40:19 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/04/30 11:32:11 by aeberius          #+#    #+#             */
+/*   Updated: 2024/05/01 13:00:43 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,27 +67,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (result);
 }
-
-/* #include <stdio.h>
-
-int main(void)
-{
-	char **mat;
-
-	mat = ft_split("test 1 2 3 ", ' ');
-	
-	int i = 0;
-	while (mat[i])
-	{
-		printf("%s\n", mat[i]);
-		i++;
-	}
-	i = 0;
-	while (mat[i])
-	{
-		free(mat[i]);
-		i++;
-	}
-	free(mat);
-	return(0);
-} */

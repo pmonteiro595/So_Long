@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 16:08:05 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/02 16:56:58 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/04/15 11:50:44 by aeberius          #+#    #+#             */
+/*   Updated: 2024/04/15 12:18:29 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

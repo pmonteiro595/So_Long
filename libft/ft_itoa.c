@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 15:51:52 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/07 15:47:01 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/04/25 13:17:40 by aeberius          #+#    #+#             */
+/*   Updated: 2024/04/26 20:19:20 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,14 +63,3 @@ int	ft_count_digit(int c)
 	count ++;
 	return (count);
 }
-
-/* #include <stdio.h>
-int main(void)
-{
-	char *test;
-	
-	test = ft_itoa(123);
-	printf("%s\n", test);
-	free(test);
-	return(0);
-} */

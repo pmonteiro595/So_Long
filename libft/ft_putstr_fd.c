@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 16:05:12 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/02 16:56:59 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/04/15 11:22:21 by aeberius          #+#    #+#             */
+/*   Updated: 2024/04/29 15:09:28 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 16:37:04 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/02 16:57:17 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/04/15 14:16:37 by aeberius          #+#    #+#             */
+/*   Updated: 2024/04/24 15:24:07 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

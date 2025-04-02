@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 18:43:15 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/06 14:47:33 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/03/23 13:06:29 by aeberius          #+#    #+#             */
+/*   Updated: 2024/04/24 15:24:35 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 16:37:22 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/02 16:57:22 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/04/15 12:21:34 by aeberius          #+#    #+#             */
+/*   Updated: 2024/04/29 14:22:52 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

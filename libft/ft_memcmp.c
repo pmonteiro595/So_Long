@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 16:35:03 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/02 16:56:49 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/04/15 15:37:22 by aeberius          #+#    #+#             */
+/*   Updated: 2024/04/16 22:41:17 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

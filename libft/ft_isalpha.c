@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 13:21:23 by pteixeir          #+#    #+#             */
-/*   Updated: 2024/11/06 13:29:25 by pteixeir         ###   ########.fr       */
+/*   Created: 2024/02/15 12:52:23 by aeberius          #+#    #+#             */
+/*   Updated: 2024/02/15 12:57:47 by aeberius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

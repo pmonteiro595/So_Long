@@ -6,7 +6,7 @@
 /*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 20:20:59 by pteixeir          #+#    #+#             */
-/*   Updated: 2025/03/05 21:41:16 by pteixeir         ###   ########.fr       */
+/*   Updated: 2025/04/03 21:55:56 by pteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	load_player_sprites(t_data *data)
 {
 	int i;
 
-	data->img = ft_calloc(sizeof(void *), 6);
+	data->img = ft_calloc(sizeof(void *), 8);
 	i = 48;
 	data->img[0] = mlx_xpm_file_to_image(data->mlx, "sprites/Standing_Vegeta_NB.xpm", &i, &i);
 	data->img[1] = mlx_xpm_file_to_image(data->mlx, "sprites/Vegeta_standing_back.xpm", &i, &i);
@@ -25,6 +25,8 @@ void	load_player_sprites(t_data *data)
 	data->img[3] = mlx_xpm_file_to_image(data->mlx, "sprites/saiyan_pod_exit.xpm", &i, &i);
 	data->img[4] = mlx_xpm_file_to_image(data->mlx, "sprites/brick_wall.xpm", &i, &i);
 	data->img[5] = mlx_xpm_file_to_image(data->mlx, "sprites/background.xpm", &i, &i);
+	data->img[6] = mlx_xpm_file_to_image(data->mlx, "sprites/vegeta_fly_left.xpm", &i, &i);
+	data->img[7] = mlx_xpm_file_to_image(data->mlx, "sprites/vegeta_fly_right.xpm", &i, &i);
 }
 
 void	render_sprites(t_data *data, int i, int g)

@@ -6,7 +6,7 @@
 /*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 20:28:24 by pteixeir          #+#    #+#             */
-/*   Updated: 2025/04/02 20:56:21 by pteixeir         ###   ########.fr       */
+/*   Updated: 2025/04/03 22:47:16 by pteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,11 +99,31 @@ void	graphics_initialize(t_data *data)
 
 	width = (data->map_data->columns) * 48;
 	height = (data->map_data->lines) * 48;
-	data->win = mlx_new_window(data->mlx, width, height,
-			"Vegeta");
+	data->win = mlx_new_window(data->mlx, width, height, "Vegeta");
+	data->last_horizontal_dir = RIGHT_ARROW;
 	load_player_sprites(data);
+	count_collectibles(data);
 	render_sprites(data, -1, -1);
 	mlx_hook(data->win, 2, 1L << 0, update_player_sprite, data);
+	mlx_hook(data->win, 3, 1L << 1, key_release, data);
 	mlx_hook(data->win, 17, 1L << 17, close_window, data);
 	mlx_loop(data->mlx);
+}
+
+int	key_release(int keycode, t_data *data)
+{
+	if (keycode == LEFT_ARROW || keycode == A_KEY)
+		data->player_img_index = STAND_LEFT;
+	else if (keycode == RIGHT_ARROW || keycode == D_KEY)
+		data->player_img_index = STAND_RIGHT;
+
+	int x = data->map_data->player_position[1];
+	int y = data->map_data->player_position[0];
+	int t = 48;
+
+	mlx_put_image_to_window(data->mlx, data->win, data->img[5], x * t, y * t);
+	mlx_put_image_to_window(data->mlx, data->win,
+		data->img[data->player_img_index], x * t, y * t);
+
+	return (0);
 }

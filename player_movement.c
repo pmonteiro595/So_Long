@@ -6,7 +6,7 @@
 /*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 20:24:04 by pteixeir          #+#    #+#             */
-/*   Updated: 2025/04/02 20:57:40 by pteixeir         ###   ########.fr       */
+/*   Updated: 2025/04/03 23:19:47 by pteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,38 +49,60 @@ void	check_exit_and_update(t_data *data, char new_pos)
 		show_end_image(data);
 	}
 }
-void	move_player(int new_x, int new_y, t_data *data)
+#include "so_long.h"
+
+void	move_player(int nx, int ny, t_data *d)
 {
-	if (data->map_data->map[new_y][new_x] != '1')
-	{
-		update_player_position(data, new_x, new_y);
-	}
-	render_sprites(data, -1, -1);
+	int	x = d->map_data->player_position[1];
+	int	y = d->map_data->player_position[0];
+	int	t = 48;
+	char	n = d->map_data->map[ny][nx];
+
+	if (n == '1' || (n == 'E' && d->map_data->collectibles > 0))
+		return;
+	if (n == 'E' && d->map_data->collectibles == 0)
+		return (show_end_image(d), (void)0);
+	if (n == 'C')
+		d->map_data->collectibles--;
+	d->map_data->moves++;
+	d->map_data->map[y][x] = '0';
+	d->map_data->map[ny][nx] = 'P';
+	d->map_data->player_position[0] = ny;
+	d->map_data->player_position[1] = nx;
+	mlx_put_image_to_window(d->mlx, d->win, d->img[5], x * t, y * t);
+	mlx_put_image_to_window(d->mlx, d->win,
+		d->img[d->player_img_index], nx * t, ny * t);
+	if (d->player_img_index == FLY_LEFT)
+		d->player_img_index = STAND_LEFT;
+	else if (d->player_img_index == FLY_RIGHT)
+		d->player_img_index = STAND_RIGHT;
+	ft_printf("Moves: %d 🟠🐉\n", d->map_data->moves);
 }
 
-int	update_player_sprite(int keycode, t_data *data)
+int	update_player_sprite(int k, t_data *d)
 {
-	int	new_x;
-	int	new_y;
+	int	x = d->map_data->player_position[1];
+	int	y = d->map_data->player_position[0];
+	int	nx = x;
+	int	ny = y;
 
-	new_x = data->map_data->player_position[1];
-	new_y = data->map_data->player_position[0];
-	if (keycode == ESC)
-		free_all(data);
-	else if (keycode == UP_ARROW || keycode == W_KEY)
-		new_y -= 1;
-	else if (keycode == DOWN_ARROW || keycode == S_KEY)
-		new_y += 1;
-	else if (keycode == LEFT_ARROW || keycode == A_KEY)
-	{
-		new_x -= 1;
-		data->player_img_index = 1;
-	}
-	else if (keycode == RIGHT_ARROW || keycode == D_KEY)
-	{
-		new_x += 1;
-		data->player_img_index = 0;
-	}
-	move_player(new_x, new_y, data);
+	if (k == ESC)
+		free_all(d);
+	else if ((k == UP_ARROW || k == W_KEY) && (ny-- || 1))
+		d->player_img_index = (d->last_horizontal_dir == LEFT_ARROW)
+			? FLY_LEFT : FLY_RIGHT;
+	else if ((k == DOWN_ARROW || k == S_KEY) && (ny++ || 1))
+		d->player_img_index = (d->last_horizontal_dir == LEFT_ARROW)
+			? FLY_LEFT : FLY_RIGHT;
+	else if ((k == LEFT_ARROW || k == A_KEY) && (nx-- || 1))
+		d->player_img_index = FLY_LEFT, d->last_horizontal_dir = LEFT_ARROW;
+	else if ((k == RIGHT_ARROW || k == D_KEY) && (nx++ || 1))
+		d->player_img_index = FLY_RIGHT, d->last_horizontal_dir = RIGHT_ARROW;
+	if (nx != x || ny != y)
+		move_player(nx, ny, d);
 	return (0);
 }
+
+
+
+

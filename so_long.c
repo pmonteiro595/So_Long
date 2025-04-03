@@ -6,7 +6,7 @@
 /*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 21:58:26 by pteixeir          #+#    #+#             */
-/*   Updated: 2025/03/05 21:18:31 by pteixeir         ###   ########.fr       */
+/*   Updated: 2025/04/03 19:22:37 by pteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,25 @@ void	print_error_menssage(char *menssage, t_data *data)
 	if (data != NULL)
 		free_all(data);
 	exit(1);
+}
+
+void	count_collectibles(t_data *data)
+{
+	int	x;
+	int	y;
+	int	count = 0;
+
+	y = 0;
+	while (data->map_data->map[y])
+	{
+		x = 0;
+		while (data->map_data->map[y][x])
+		{
+			if (data->map_data->map[y][x] == 'C')
+				count++;
+			x++;
+		}
+		y++;
+	}
+	data->map_data->collectibles = count;
 }

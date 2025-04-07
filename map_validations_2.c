@@ -6,7 +6,7 @@
 /*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 20:51:53 by pteixeir          #+#    #+#             */
-/*   Updated: 2025/03/05 21:30:46 by pteixeir         ###   ########.fr       */
+/*   Updated: 2025/04/07 21:32:07 by pteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,45 +50,31 @@ void	count_columns(char *argv, t_data *data)
 	close(fd);
 }
 
-#include "so_long.h"
-
-#include "so_long.h"
-
-#include "so_long.h"
-
-#include "so_long.h"
-
-#include "so_long.h"
-
-#include "so_long.h"
-
-#include "so_long.h"
-
-#include "so_long.h"
-
 void	extract_from_fd_to_map(char *argv, t_data *data)
 {
-    int		i = 0, fd = open(argv, O_RDONLY);
-    char	*lines;
+	int		i;
+	int		fd;
+	char	*lines;
 
-    if (fd < 0)
-        print_error_menssage("Failed to open file", data);
-    data->map_data->map = ft_calloc(data->map_data->lines + 1, sizeof(char *));
-    data->map_data->dummy_map = ft_calloc(data->map_data->lines + 1, sizeof(char *));
-    if (!data->map_data->map || !data->map_data->dummy_map)
-        print_error_menssage("Failed to allocate memory", data);
-    while ((lines = get_next_line(fd)))
-    {
-        data->map_data->map[i] = ft_strdup(lines);
-        data->map_data->dummy_map[i] = ft_strdup(lines);
-        if (!data->map_data->map[i] || !data->map_data->dummy_map[i])
-            print_error_menssage("Failed to duplicate line", data);
-        free(lines);
-        i++;
-    }
-    close(fd);
+	i = 0;
+	fd = open(argv, O_RDONLY);
+	if (fd < 0)
+		print_error_menssage("Failed to open file", data);
+	data->map_data->map = ft_calloc(data->map_data->lines + 1, sizeof(char *));
+	data->map_data->dummy_map = ft_calloc(data->map_data->lines + 1, sizeof(char *));
+	if (!data->map_data->map || !data->map_data->dummy_map)
+		print_error_menssage("Failed to allocate memory", data);
+	while ((lines = get_next_line(fd)))
+	{
+		data->map_data->map[i] = ft_strdup(lines);
+		data->map_data->dummy_map[i] = ft_strdup(lines);
+		if (!data->map_data->map[i] || !data->map_data->dummy_map[i])
+			print_error_menssage("Failed to duplicate line", data);
+		free(lines);
+		i++;
+	}
+	close(fd);
 }
-
 
 int	check_map_content(char **map)
 {

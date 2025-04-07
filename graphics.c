@@ -6,7 +6,7 @@
 /*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 20:28:24 by pteixeir          #+#    #+#             */
-/*   Updated: 2025/04/03 22:47:16 by pteixeir         ###   ########.fr       */
+/*   Updated: 2025/04/05 20:19:47 by pteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	show_intro(t_data *data)
 	int	width;
 	int	height;
 
-	width = 1510;
-	height = 800;
+	width = 1920;
+	height = 1080;
 	data->mlx = mlx_init();
 	if (data->mlx == NULL)
 		print_error_menssage("Failed to initialize mlx\n", data);

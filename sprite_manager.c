@@ -6,7 +6,7 @@
 /*   By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 20:20:59 by pteixeir          #+#    #+#             */
-/*   Updated: 2025/04/03 21:55:56 by pteixeir         ###   ########.fr       */
+/*   Updated: 2025/04/05 19:58:47 by pteixeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,29 +31,32 @@ void	load_player_sprites(t_data *data)
 
 void	render_sprites(t_data *data, int i, int g)
 {
+	i = -1;
 	while (++i < data->map_data->lines && data->map_data->map[i] != NULL)
 	{
 		g = -1;
 		while (++g < data->map_data->columns && data->map_data->map[i] != NULL)
 		{
 			if (data->map_data->map[i][g] == '1')
-				mlx_put_image_to_window(data->mlx, data->win, data->img[4],
-					g * 48, i * 48);
-			else if (data->map_data->map[i][g] == '0')
-				mlx_put_image_to_window(data->mlx, data->win, data->img[5],
-					g * 48, i * 48);
-			else if (data->map_data->map[i][g] == 'P')
+				mlx_put_image_to_window(data->mlx, data->win,
+					data->img[4], g * 48, i * 48);
+			else
+				mlx_put_image_to_window(data->mlx, data->win,
+					data->img[5], g * 48, i * 48);
+			if (i == data->map_data->exit_position[0] &&
+				g == data->map_data->exit_position[1])
+				mlx_put_image_to_window(data->mlx, data->win,
+					data->img[3], g * 48, i * 48);
+			if (data->map_data->map[i][g] == 'C')
+				mlx_put_image_to_window(data->mlx, data->win,
+					data->img[2], g * 48, i * 48);
+			if (data->map_data->map[i][g] == 'P')
 				mlx_put_image_to_window(data->mlx, data->win,
 					data->img[data->player_img_index], g * 48, i * 48);
-			else if (data->map_data->map[i][g] == 'C')
-				mlx_put_image_to_window(data->mlx, data->win, data->img[2],
-					g * 48, i * 48);
-			else if (data->map_data->map[i][g] == 'E')
-				mlx_put_image_to_window(data->mlx, data->win, data->img[3],
-					g * 48, i * 48);
 		}
 	}
 }
+
 
 int	close_window(t_data *data)
 {

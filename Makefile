@@ -1,48 +1,22 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: pteixeir <pteixeir@student.42porto.com>    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/03/05 20:53:17 by pteixeir          #+#    #+#              #
-#    Updated: 2025/03/05 20:53:32 by pteixeir         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+##
+## Makefile for MiniLibX in /home/boulon/work/c/raytraceur/minilibx
+## 
+## Made by Olivier Crouzet
+## Login   <ol@epitech.net>
+## 
+## Started on  Tue Oct  5 15:56:43 2004 Olivier Crouzet
+## Last update Tue May 15 15:44:41 2007 Olivier Crouzet
+##
 
-NAME = so_long
-CC = cc -Wall -Wextra -Werror
-RM = rm -rf
-LIBFT = libft/libft.a
-LIBFT_DIR = libft/
-MLX_DIR = ./mlx
-MLX_FLAGS = -Lmlx -lmlx -L/usr/lib/X11 -lXext -lX11
-MLX_LIB = $(MLX_DIR)/libmlx_Linux.a
-SRCS = *.c
-OBJS = $(SRCS:.c=.o)
-INCLUDES = -I/usr/include -Imlx
+## Please use configure script
 
-all:  $(MLX_LIB) $(NAME)
 
-$(NAME): $(LIBFT) $(OBJS)
-	$(CC) -o $(NAME) $(OBJS) $(LIBFT) $(MLX_FLAGS)
+all	: do_configure
 
-$(MLX_LIB):
-	@make -C $(MLX_DIR)
+do_configure	:
+	./configure
 
-$(LIBFT):
-	$(MAKE) -C $(LIBFT_DIR)
+clean	:
+	./configure clean
 
-$(OBJS): $(SRCS)
-	$(CC) -c $(SRCS) $(INCLUDES)
-
-clean:
-	$(RM) $(OBJS)
-	$(MAKE) clean -C $(LIBFT_DIR)
-
-fclean: clean
-	$(RM) $(NAME)
-	$(MAKE) fclean -C $(LIBFT_DIR)
-
-re: fclean
-	$(MAKE)
+re	: clean all
